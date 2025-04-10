@@ -3,7 +3,7 @@ import { Animated, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Screens
-import LiveScreen from '../screens/tabScreens/LiveScreen';
+import LiveScreen from '../screens/tabScreens/HomeLiveScreen';
 import PartyScreen from '../screens/tabScreens/PartyScreen';
 import ExploreScreen from '../screens/tabScreens/ExploreScreen';
 import MessageScreen from '../screens/tabScreens/MessageScreen';
@@ -21,6 +21,7 @@ import LiveActiveIcon from '../assets/images/navigation_assets/live-active.svg';
 import PartyIcon from '../assets/images/navigation_assets/glass.svg';
 import PartyActiveIcon from '../assets/images/navigation_assets/glass-active.svg';
 import customColors from '../constants/styles';
+import HomeLiveScreen from '../screens/tabScreens/HomeLiveScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -79,7 +80,7 @@ const MainTabNavigator = () => {
         >
             <Tab.Screen
                 name="Live"
-                component={LiveScreen}
+                component={HomeLiveScreen}
                 options={{
                     tabBarIcon: ({ focused }) => getTabIcon(focused, <LiveIcon />, <LiveActiveIcon />, 'live'),
                 }}
